@@ -1,0 +1,86 @@
+.desc {
+  @include bg;
+  background-image: url('/src/img/bgs/desc-bg.jpg');
+  padding-bottom: 45px;
+  min-height: 986px;
+  background-color: #f7e8ef;
+
+  @media (max-width: 900px) {
+    background-image: none;
+
+  }
+}
+
+.desc__title {
+  @include max-width(745px);
+  font-size: 44px;
+  text-transform: uppercase;
+  margin-bottom: 41px;
+
+  @include tablet-mb(30px);
+  @include mobile-mb(20px);
+
+  span {
+    color: #4d6bea;
+  }
+}
+
+.desc__text {
+  @include max-width(675px);
+  font-size: 22px;
+  line-height: 1.55;
+  margin-bottom: 47px;
+
+  @include tablet-mb(30px);
+  @include mobile-mb(20px);
+
+  span {
+    background-color: #4d6bea;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+  }
+}
+
+.desc__list {
+  @include reset-list;
+  display: flex;
+  gap: 31px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media (max-width: 1020px) {
+    @include max-width(600px);
+  }
+
+  @media (max-width: 900px) {
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  @include tablet-mb(30px);
+  @include mobile-mb(20px);
+}
+
+.desc__item {
+  padding-left: 70px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &::before {
+    width: 48px;
+    height: 48px;
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    @include bg;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url('/src/img/icons/desc/#{$i}.png');
+    }
+  }
+}
