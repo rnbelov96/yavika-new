@@ -2,6 +2,14 @@
   background-color: #2e2427;
   padding-top: 95px;
   padding-bottom: 85px;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/thesis-word.png');
+    @include x-align;
+    bottom: -3px;
+    position: absolute;
+  }
 }
 
 .thesis__title {
@@ -14,7 +22,7 @@
 
 .thesis__text {
   color: white;
-  margin-bottom: 190px;
+  margin-bottom: 62px;
   text-align: center;
   font-size: 22px;
   font-weight: bold;
@@ -34,4 +42,50 @@
   font-size: 22px;
   line-height: 1.55;
   margin-bottom: 0;
+}
+
+.thesis__swiper {
+  @include max-width(490px);
+  margin-left: 0;
+  margin-bottom: 40px;
+}
+
+.thesis__swiper-images {
+  @include max-width(568px);
+}
+
+.thesis__slider-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 62px;
+  position: relative;
+  &::after {
+    width: 900px;
+    height: 900px;
+    z-index: -1;
+    top: 50%;
+    right: -121px;
+    transform: translate3d(0, -50%, 0);
+    background: radial-gradient(
+      circle,
+      rgba(199, 63, 126, 0.35) 0%,
+      rgba(199, 63, 126, 0) 60%
+    );
+    content: '';
+    position: absolute;
+  }
+
+  @include tablet-mb(40px);
+  @include mobile-mb(20px);
+}
+
+.thesis__note {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.55;
+  margin-bottom: 0;
+  color: white;
 }

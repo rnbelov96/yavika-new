@@ -1,7 +1,5 @@
-.swiper {
-  @include max-width(490px);
-  margin-left: 0;
-  margin-bottom: 40px;
+.swiper-slide img {
+  width: 100%;
 }
 
 .swiper-btn-box {
