@@ -1,0 +1,37 @@
+.thesis {
+  background-color: #2e2427;
+  padding-top: 95px;
+  padding-bottom: 85px;
+}
+
+.thesis__title {
+  @include title;
+  margin-bottom: 38px;
+
+  @include tablet-mb(30px);
+  @include mobile-mb(20px);
+}
+
+.thesis__text {
+  color: white;
+  margin-bottom: 190px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.55;
+}
+
+.thesis__item-title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.17;
+  margin-bottom: 23px;
+  color: #fa5ea6;
+}
+
+.thesis__item-text {
+  color: white;
+  font-size: 22px;
+  line-height: 1.55;
+  margin-bottom: 0;
+}

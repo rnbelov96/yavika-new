@@ -7,7 +7,11 @@
 
   @media (max-width: 900px) {
     background-image: none;
+    min-height: auto;
+  }
 
+  @media (max-width: 650px) {
+    padding-bottom: 30px;
   }
 }
 
@@ -17,8 +21,12 @@
   text-transform: uppercase;
   margin-bottom: 41px;
 
+  @media (max-width: 767px) {
+    font-size: 36px;
+  }
+
   @include tablet-mb(30px);
-  @include mobile-mb(20px);
+  @include mobile-mb(15px);
 
   span {
     color: #4d6bea;
@@ -31,8 +39,12 @@
   line-height: 1.55;
   margin-bottom: 47px;
 
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+
   @include tablet-mb(30px);
-  @include mobile-mb(20px);
+  @include mobile-mb(15px);
 
   span {
     background-color: #4d6bea;
@@ -58,8 +70,12 @@
     max-width: 100%;
   }
 
+  @media (max-width: 650px) {
+    gap: 15px;
+  }
+
   @include tablet-mb(30px);
-  @include mobile-mb(20px);
+  @include mobile-mb(15px);
 }
 
 .desc__item {
@@ -67,6 +83,12 @@
   position: relative;
   font-size: 16px;
   line-height: 1.5;
+
+  @media (max-width: 650px) {
+    br {
+      display: none;
+    }
+  }
 
   &::before {
     width: 48px;

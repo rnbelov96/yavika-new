@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Франшиза «»</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"
+      integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
       integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
@@ -50,8 +60,8 @@
           </h1>
           <p class="desc__text">
             Запустите продажи украшений и аксессуаров с наценками
-            <span>от 200% до 1&nbsp;000%</span> на OZON, Wildberries и
-            KazanExpress и зарабатывайте
+            <span>от&nbsp;200%&nbsp;до&nbsp;1&nbsp;000%</span> на OZON,
+            Wildberries и KazanExpress и зарабатывайте
             <b>от 2&nbsp;600&nbsp;000 рублей в год</b>
           </p>
           <ul class="desc__list">
@@ -71,7 +81,10 @@
               нейросетей
             </li>
           </ul>
-          <form class="line-form">
+          <button class="button button_present js-present">
+            Получить презентацию
+          </button>
+          <form class="line-form line-form_desc">
             <h3 class="line-form__title">
               Получите презентацию и финансовую модель франшизы на почту, чтобы
               убедиться в рентабельности бизнес-модели
@@ -118,21 +131,100 @@
           </form>
         </div>
       </section>
-      <!-- <section class="slider">
-        <div class="slider__wrapper">
-          <div class="slider__img-box">
-            <div class="slider__img-item"></div>
-            <div class="slider__img-item"></div>
-            <div class="slider__img-item"></div>
-            <div class="slider__img-item"></div>
+
+      <section class="thesis">
+        <div class="container">
+          <h2 class="thesis__title js-block-title">
+            <span
+              >Перспективность бизнеса
+              <span class="title-line title-line_left"></span
+              ><span class="title-line title-line_right"></span
+            ></span>
+            <br />
+            на маркетплейсах с YAVIKA в 5 тезисах
+          </h2>
+          <p class="thesis__text">
+            Крайние годы стали взрывными для интернет-торговли, <br />
+            и сейчас у вас ещё есть возможность использовать тренды для создания
+            прибыльного дела.
+          </p>
+          <div class="swiper thesis__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div>
+                  <p class="thesis__item-title">
+                    134,7 млрд <br />
+                    рублей выручки
+                  </p>
+                  <p class="thesis__item-text">
+                    и 80% рост показал Wildberries только за первый квартал
+                    2021-го. OZON и Wildberries по итогам 2020 года вошли в топ-5
+                    самых дорогих компаний России.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <p class="thesis__item-title">Наценки до 300%</p>
+                  <p class="thesis__item-text">
+                    Товары на маркетплейсах продаются с высокими наценками от
+                    закупочной стоимости, при этом спрос на них всегда высок.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <p class="thesis__item-title">
+                    Затраты на офис <br />
+                    0 рублей
+                  </p>
+                  <p class="thesis__item-text">
+                    Вести бизнес на маркетплейсах возможно без офиса и собственных
+                    складов, следовательно, вы будете экономить десятки тысяч
+                    рублей ежемесячно.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <p class="thesis__item-title">
+                    Расходы ФОТ <br />
+                    составят 0 рублей
+                  </p>
+                  <p class="thesis__item-text">
+                    Продавать на маркетплейсах возможно в одиночку без команды.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <p class="thesis__item-title">
+                    Больше <br />
+                    свободного времени
+                  </p>
+                  <p class="thesis__item-text">
+                    Такой бизнес требует гораздо меньше времени, чем классический,
+                    его легко совмещать с работой или другим делом, а также
+                    посвящать больше времени семье и отдыху.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-input-box">
+            <div class="swiper-btn-box">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <p class="thesis__note">
+            Рынок перспективен, однако, чтобы выйти на него без ошибок <br />
+            и зарабатывать с первого дня, необходимо заручиться поддержкой
+            профессионалов.
+          </p>
         </div>
-        <div class="slider__btns-box">
-          <button class="slider__btn-prev"></button
-          ><button class="slider__btn-next"></button>
-        </div>
-        <div class="slider__nav-box"></div>
-      </section> -->
+      </section>
     </main>
 
     <div class="modal">

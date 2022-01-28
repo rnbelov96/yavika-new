@@ -1,21 +1,22 @@
 .button {
   @include reset-btn;
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 70px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 7px;
   padding-right: 7px;
-  text-transform: uppercase;
-  color: white;
+  color: black;
   font-weight: 700;
-  background: linear-gradient(180deg, #ffa665 0%, #fc4f19 100%);
-  box-shadow: 0px 6px 0px #cb3300;
-  border-radius: 8px;
-  width: 100%;
-  min-height: 92px;
+  box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.11);
+  background: linear-gradient(-45deg, #fae731, #ffff00, #d7ad1b, #ffbf55);
+  background-size: 400% 400%;
+  animation: gradient 5s infinite;
+  border-radius: 50px;
+  @include max-width(288px);
+  min-height: 70px;
   overflow: hidden;
   position: relative;
 
@@ -23,13 +24,23 @@
     font-size: 16px;
   }
 
+  &_present {
+    display: none;
+
+    @media (max-width: 650px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   &:hover {
-    background: #fc4f19;
+    background: #ffa200;
   }
 
   &:active {
-    background: #cb3300;
     box-shadow: none;
+    background: #ffa200;
     top: 6px;
   }
 
@@ -64,6 +75,30 @@
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     z-index: 0;
+  }
+
+  @-webkit-keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   @-webkit-keyframes slideme {

@@ -1,0 +1,133 @@
+.line-form {
+  background-color: white;
+  background-image: linear-gradient(
+    180deg,
+    rgba(248, 216, 224, 1) 0%,
+    rgba(248, 216, 224, 0) 30%
+  );
+  box-shadow: 0px 6px 7px 5px rgba(221, 170, 184, 0.2) inset;
+  border-radius: 20px;
+  padding-left: 43px;
+  padding-right: 43px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+
+  &_desc {
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    padding: 25px;
+  }
+
+  @media (max-width: 800px) {
+    @include max-width(600px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.line-form__title {
+  @include max-width(782px);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 31px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.36;
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.line-form__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 27px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+
+  @include mobile-mb(20px);
+}
+
+.line-form__input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.line-form__input-box {
+  @include max-width(238px);
+  position: relative;
+  border-radius: 7px;
+  background-color: #f9edf2;
+  display: flex;
+  align-items: center;
+  padding-left: 54px;
+  padding-right: 10px;
+  min-height: 57px;
+}
+
+.line-form__input {
+  width: 100%;
+  color: black;
+  font-size: 14px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  &::-webkit-input-placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    color: #999;
+    font-style: italic;
+  }
+}
+
+.line-form__policy {
+  @include max-width(690px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  line-height: 1.5;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    font-size: 12px !important;
+  }
+
+  span {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

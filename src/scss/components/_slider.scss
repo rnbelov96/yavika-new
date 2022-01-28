@@ -1,80 +1,61 @@
-.slider {
-  width: 100%;
+.swiper {
+  @include max-width(490px);
+  margin-left: 0;
+  margin-bottom: 40px;
 }
 
-.slider__wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-.slider__img-box {
+.swiper-btn-box {
   display: flex;
-  justify-content: space-between;
-  touch-action: pan-y;
-  user-select: none;
+  gap: 50px;
 }
 
-.slider__img-item {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-
-  img {
-    pointer-events: none;
-  }
-}
-
-.slider__nav-box {
-  display: flex;
-  justify-content: flex-start;
+.swiper-button-next,
+.swiper-button-prev {
   position: relative;
-  gap: 30px;
-
-  @media (max-width: 991px) {
-    justify-content: center;
-  }
-}
-
-.slider__nav-item {
-  @include reset-btn;
-  width: 11px;
-  height: 11px;
-  background: #d9d9d9;
-  border-radius: 50%;
-
-  &_active {
-    background: #ff3364;
-  }
-}
-
-.slider__btns-box {
-  display: flex;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  gap: 27px;
-
-  @media (max-width: 650px) {
-    display: none;
-  }
-}
-
-.slider__btn-next,
-.slider__btn-prev {
-  @include reset-btn;
-  width: 44px;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 43px;
   height: 44px;
-  background: linear-gradient(180deg, #f64871 0%, #fe3459 100%);
-  box-shadow: 0px 0px 15px rgba(247, 73, 115, 0.6);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include bg;
+  transition: transform 0.3s;
+  margin-top: 0;
 
-  &:hover,
-  &:focus,
-  &:active {
-    background: linear-gradient(180deg, #ff829f 0%, #ff708a 100%);
-    box-shadow: 0px 0px 15px rgba(247, 73, 115, 0.6);
+  &::after {
+    content: none;
   }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.swiper-button-next {
+  background-image: url('/src/img/icons/slider-left-arrow.png');
+}
+.swiper-button-prev {
+  background-image: url('/src/img/icons/slider-right-arrow.png');
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 0;
+  width: auto;
+  font-size: 22px;
+  color: #5f3b4a;
+
+  span {
+    font-size: 40px;
+  }
+}
+
+.swiper-input-box {
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
 }
