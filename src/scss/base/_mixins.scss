@@ -45,7 +45,7 @@
 
     .title-line {
       position: absolute;
-      @include y-align;
+      top: 50%;
       width: 106px;
       height: 6px;
       background-image: url('/src/img/icons/wave.png');
@@ -54,12 +54,27 @@
       }
       &_right {
         right: -126px;
+        @media (max-width: 650px) {
+          right: -192px;
+        }
+      }
+      &_left-brand {
+        left: -126px;
+        @media (max-width: 650px) {
+          left: -198px;
+        }
+      }
+      &_right-brand {
+        right: -126px;
+        @media (max-width: 650px) {
+          right: -115px;
+        }
       }
     }
   }
 
   @media (max-width: 991px) {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 40px;
   }
 

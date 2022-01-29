@@ -47,6 +47,16 @@
   font-size: 22px;
   color: #5f3b4a;
 
+  &_brands {
+    margin-top: 15px;
+
+    span {
+      width: 15px;
+      height: 15px;
+      background-color: #deabba;
+    }
+  }
+
   span {
     font-size: 40px;
   }
@@ -56,4 +66,13 @@
   display: flex;
   gap: 40px;
   align-items: flex-end;
+}
+
+.swiper_brands {
+  display: none;
+
+  @media (max-width: 1060px) {
+    display: block;
+  }
+  @include max-width(500px);
 }

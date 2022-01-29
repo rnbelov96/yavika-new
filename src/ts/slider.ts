@@ -9,6 +9,7 @@ const swiper = new Swiper('.thesis__swiper', {
   speed: 800,
   effect: 'fade',
   longSwipesRatio: 0.2,
+  autoHeight: true,
   fadeEffect: {
     crossFade: true,
   },
@@ -20,8 +21,12 @@ const swiper = new Swiper('.thesis__swiper', {
   pagination: {
     el: '.swiper-pagination',
     type: 'custom',
-    renderCustom: (swiper, current, total) => {
-      return `<span>0${current}</span> из 0${total}`;
+    renderCustom: (swiper, current: string, total: string) =>
+      `<span>0${current}</span> из 0${total}`,
+  },
+  breakpoints: {
+    650: {
+      autoHeight: false,
     },
   },
 });
@@ -33,6 +38,17 @@ const swiper2 = new Swiper('.thesis__swiper-images', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiperBrands = new Swiper('.swiper_brands', {
+  slidesPerView: 1,
+  speed: 800,
+  autoHeight: true,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination_brands',
+    clickable: true,
   },
 });
 
