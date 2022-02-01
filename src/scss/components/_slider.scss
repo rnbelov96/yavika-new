@@ -5,6 +5,11 @@
 .swiper-btn-box {
   display: flex;
   gap: 50px;
+
+  @media (max-width: 650px) {
+    position: absolute;
+    bottom: -56px;
+  }
 }
 
 .swiper-button-next,
