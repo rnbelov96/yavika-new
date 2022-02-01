@@ -1,10 +1,12 @@
-html p, li {
+html p,
+li {
   @media (max-width: 650px) {
     font-size: 16px !important;
   }
 }
 
-html h1, h2 {
+html h1,
+h2 {
   @media (max-width: 650px) {
     font-size: 22px !important;
   }
@@ -61,6 +63,10 @@ main {
   padding-right: 46px;
   position: relative;
 
+  @media (max-width: 650px) {
+    font-size: 22px;
+  }
+
   &::after {
     content: url('/src/img/icons/arrow-down.png');
     position: absolute;
@@ -75,4 +81,13 @@ main {
       top: 9px;
     }
   }
+}
+
+.js-height-toggle {
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.rouble {
+  font-family: 'ALSRubl';
 }

@@ -89,6 +89,24 @@
   padding-left: 54px;
   padding-right: 10px;
   min-height: 57px;
+  position: relative;
+
+  &::before {
+    @include bg;
+    @include y-align;
+    position: absolute;
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    content: '';
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url('/src/img/icons/form/#{$i}.png')
+    }
+  }
 }
 
 .line-form__input {

@@ -70,6 +70,42 @@
           right: -115px;
         }
       }
+      &_left-stock {
+        left: -126px;
+        @media (max-width: 650px) {
+          left: -136px;
+        }
+      }
+      &_right-stock {
+        right: -126px;
+        @media (max-width: 834px) {
+          right: -247px;
+        }
+        @media (max-width: 650px) {
+          right: -126px;
+        }
+      }
+      &_left-steps {
+        left: -126px;
+      }
+      &_right-steps {
+        right: -126px;
+      }
+
+      &_left-direct {
+        top: 23px;
+        left: -126px;
+        @media (max-width: 650px) {
+          left: -126px;
+        }
+      }
+      &_right-direct {
+        top: 23px;
+        right: -152px;
+        @media (max-width: 650px) {
+          right: -76px;
+        }
+      }
     }
   }
 

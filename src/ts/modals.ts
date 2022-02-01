@@ -5,12 +5,12 @@ const openedModalList: Element[] = [];
 
 const modalFormInfoList = [
   {
-    title: 'на бесплатную консультацию',
-    button: 'Получить консультацию',
+    title: 'Заказать обратный звонок',
+    button: 'Отправить',
   },
   {
-    title: 'на презентацию франшизы и финансовую модель',
-    button: 'Получить презентацию',
+    title: 'Получите каталог нашей франшизы',
+    button: 'Отправить',
   },
 ];
 
@@ -99,7 +99,7 @@ presentBtnElList.forEach(btn => {
   });
 });
 
-// Для каждого модального окна с видео прописать такой обработчик 
+// Для каждого модального окна с видео прописать такой обработчик
 const youtubeBtnCallEl = document.querySelector('.js-youtube');
 youtubeBtnCallEl?.addEventListener('click', () => {
   if (!isYoutubeModalOpened) {

@@ -1,0 +1,129 @@
+.modal-form {
+  background-color: white;
+  box-shadow: 0px 15px 117px 0 rgba(255, 255, 255, 0.42);
+  padding-top: 42px;
+  padding-left: 47px;
+  padding-right: 47px;
+  padding-bottom: 40px;
+  @include max-width(350px);
+  width: 98%;
+
+  @media (max-width: 650px) {
+    padding: 25px;
+  }
+}
+
+.modal-form__title {
+  @include max-width(782px);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 27px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.42;
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.modal-form__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 27px;
+  flex-direction: column;
+
+  @include mobile-mb(20px);
+}
+
+.modal-form__input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-form__input-box {
+  width: 100%;
+  position: relative;
+  border-radius: 7px;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  padding-left: 54px;
+  padding-right: 10px;
+  min-height: 57px;
+  position: relative;
+
+  &::before {
+    @include bg;
+    @include y-align;
+    position: absolute;
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    content: '';
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url('/src/img/icons/form/#{$i}.png')
+    }
+  }
+}
+
+.modal-form__input {
+  width: 100%;
+  color: black;
+  font-size: 14px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  &::-webkit-input-placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    color: #999;
+    font-style: italic;
+  }
+}
+
+.modal-form__policy {
+  @include max-width(690px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+  line-height: 1.5;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    font-size: 10px !important;
+  }
+
+  span {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

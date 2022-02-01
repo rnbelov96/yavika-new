@@ -1,0 +1,90 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+
+  @media (max-width: 650px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 860px) {
+  flex-direction: column;
+  align-items: center;
+  }
+}
+
+.footer__data {
+  margin-bottom: 0;
+  line-height: 1.71;
+  font-size: 14px;
+  margin-bottom: 4px;
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+  }
+}
+
+.footer__address {
+  padding-left: 37px;
+  position: relative;
+  margin-bottom: 0;
+  font-size: 14px;
+
+  &::before {
+    content: '';
+    width: 31px;
+    height: 22px;
+    @include bg;
+    background-image: url('/src/img/icons/gerb.png');
+    position: absolute;
+    left: 0;
+    @include y-align;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+  }
+}
+
+.footer__social-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer__social-link {
+  width: 32px;
+  height: 32px;
+  @include bg;
+  
+  &_insta {
+    background-image: url('/src/img/icons/insta.svg');
+  }
+  &_vk{
+    background-image: url('/src/img/icons/vk.svg');
+  }
+}
+
+.footer__right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__policy {
+  @include reset-btn;
+  font-size: 14px;
+  color: #fa5ea6;
+  text-decoration: underline;
+
+  @media (max-width: 650px) {
+  margin-top: 15px;
+  }
+}
