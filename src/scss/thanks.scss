@@ -185,13 +185,14 @@
   font-weight: bold;
   margin-bottom: 0;
   color: #4d6bea;
+  @include max-width(625px);
 }
 
 .thanks__owner-box {
   @include max-width(420px);
   position: absolute;
   right: -26px;
-  transform: translateY(-34px);
+  transform: translateY(44px);
   z-index: -1;
 
   @media (max-width: 1080px) {

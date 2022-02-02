@@ -5,6 +5,10 @@
   min-height: 986px;
   background-color: #f7e8ef;
 
+  @media (min-width: 1921px) {
+    background-size: auto;
+  }
+
   @media (max-width: 900px) {
     background-image: none;
     min-height: auto;
@@ -20,6 +24,10 @@
   font-size: 44px;
   text-transform: uppercase;
   margin-bottom: 41px;
+
+  @media (min-width: 1921px) {
+    font-size: 40px;
+  }
 
   @media (max-width: 767px) {
     font-size: 36px;
