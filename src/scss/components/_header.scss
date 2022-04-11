@@ -34,6 +34,11 @@
   position: relative;
   left: -55px;
 
+  &_thanks {
+    justify-content: space-between;
+    left: 0;
+  }
+
   @media (max-width: 1000px) {
     left: 0;
   }
@@ -79,11 +84,11 @@
   text-decoration: underline;
   padding-left: 28px;
   text-align: left;
-  
+
   &:hover::before {
     transform: translateY(-50%) rotate(40deg);
   }
-  
+
   &::before {
     @include y-align;
     transition: 0.5s;
