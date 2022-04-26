@@ -12,6 +12,10 @@ const modalFormInfoList = [
     title: 'Получите каталог нашей франшизы',
     button: 'Отправить',
   },
+  {
+    title: 'Получите каталог товаров для маркетплейсов от YAVIKA',
+    button: 'Получить каталог',
+  },
 ];
 
 const closeModal = (modalEl: HTMLDivElement) => {
@@ -95,6 +99,16 @@ presentBtnElList.forEach(btn => {
     openedModalList.unshift(formModalEl);
     formTitleEl.textContent = modalFormInfoList[1].title;
     formBtnEl.textContent = modalFormInfoList[1].button;
+    openModal(formModalEl as HTMLDivElement);
+  });
+});
+
+const catalogBtnElList = document.querySelectorAll('.js-catalog');
+catalogBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    openedModalList.unshift(formModalEl);
+    formTitleEl.textContent = modalFormInfoList[2].title;
+    formBtnEl.textContent = modalFormInfoList[2].button;
     openModal(formModalEl as HTMLDivElement);
   });
 });

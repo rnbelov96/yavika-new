@@ -45,6 +45,10 @@
   @media (max-width: 1150px) {
     margin-bottom: 250px;
   }
+
+  &_top {
+    margin-bottom: 20px;
+  }
 }
 
 .steps__list {
@@ -311,7 +315,8 @@
       }
     }
 
-    .steps__item:nth-child(4) {
+    .steps__item:nth-child(4),
+    .steps__item:nth-child(5) {
       margin-bottom: 0px;
       max-width: 100%;
       text-align: center;
