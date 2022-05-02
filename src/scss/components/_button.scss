@@ -13,7 +13,7 @@
   box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.11);
   background: linear-gradient(-45deg, #fae731, #ffff00, #d7ad1b, #ffbf55);
   background-size: 400% 400%;
-  animation: gradient 5s infinite;
+  animation: gradient 5s infinite, text-color 5s infinite;
   border-radius: 50px;
   @include max-width(288px);
   min-height: 70px;
@@ -105,6 +105,18 @@
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+
+  @keyframes text-color {
+    0% {
+      color: white;
+    }
+    50% {
+      color: black;
+    }
+    100% {
+      color: white;
     }
   }
 
