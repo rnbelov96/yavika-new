@@ -6,7 +6,7 @@ const openedModalList: Element[] = [];
 const modalFormInfoList = [
   {
     title: 'Заказать обратный звонок',
-    button: 'Отправить',
+    button: 'Заказать',
   },
   {
     title: 'Получите каталог нашей франшизы',
