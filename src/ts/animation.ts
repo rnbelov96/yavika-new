@@ -4,6 +4,7 @@ const animationElList = [
   ...document.querySelectorAll('.animateX'),
   ...document.querySelectorAll('.animateY'),
   ...document.querySelectorAll('.animateX-reverse'),
+  ...document.querySelectorAll('.animateZ'),
 ];
 
 const titleElList = document.querySelectorAll('.js-title');

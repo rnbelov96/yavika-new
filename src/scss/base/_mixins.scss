@@ -97,6 +97,7 @@
         left: -126px;
         @media (max-width: 650px) {
           left: -126px;
+          top: 26px;
         }
       }
       &_right-direct {
@@ -104,6 +105,7 @@
         right: -152px;
         @media (max-width: 650px) {
           right: -76px;
+          top: 26px;
         }
       }
     }
